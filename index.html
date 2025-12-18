@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>EcoSmart AI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- LOGIN PAGE -->
+<section id="loginPage" class="card">
+<h1>🌱 EcoSmart AI</h1>
+<p>Klasifikasi Lingkungan Berbasis AI & Edukasi Sosial</p>
+<input type="text" id="username" placeholder="Username">
+<input type="password" id="password" placeholder="Password">
+<button onclick="login()">Login</button>
+<small>Password demo: <b>12345</b></small>
+</section>
+
+
+<!-- MAIN PAGE -->
+<section id="mainPage" class="hidden">
+<header>
+<h2>Halo, <span id="user"></span> 👋</h2>
+<button class="logout" onclick="logout()">Logout</button>
+</header>
+
+
+<div class="content">
+<h3>Apa itu Klasifikasi Lingkungan Berbasis AI?</h3>
+<p>
+Klasifikasi lingkungan berbasis AI adalah pemanfaatan kecerdasan buatan
+untuk mengenali kondisi lingkungan seperti <b>bersih, hijau, atau tercemar</b>
+berdasarkan data gambar dan pola visual.
+</p>
+
+
+<h3>Contoh Klasifikasi (Klik Gambar)</h3>
+<div class="gallery">
+<div class="img-card" onclick="classifyImage('tercemar')">
+<img src="sampah-plastik.jpg" alt="Lingkungan tercemar plastik">
+<p class="ai-label">AI: Lingkungan Tercemar</p>
+</div>
+<div class="img-card" onclick="classifyImage('hijau')">
+<img src="lingkungan-bersih-ciptakan-hidup-sehat-30.jpg" alt="Lingkungan hijau">
+<p class="ai-label">AI: Lingkungan Hijau</p>
+</div>
+<div class="img-card" onclick="classifyImage('polusi')">
+<img src="pencemaran-lingkungan-kenali-jenis-dampak-dan-cara-mencegahnya.jpg" alt="Polusi lingkungan">
+<p class="ai-label">AI: Polusi Lingkungan</p>
+</div>
+</div>
+
+
+<p id="result"></p>
+
+
+<h3>Edukasi Sosial</h3>
+<p>
+Dengan bantuan AI, masyarakat dapat lebih sadar terhadap dampak
+pencemaran lingkungan dan terdorong untuk melakukan aksi sosial
+seperti mengurangi sampah, daur ulang, dan menjaga kebersihan alam.
+</p>
+</div>
+</section>
+
+
+<script src="script.js"></script>
+</body>
+</html>
